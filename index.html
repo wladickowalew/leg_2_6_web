@@ -9,12 +9,16 @@
 	<div id="app">
 		<button type="button" v-on:click="double">Удвоить</button>
 		<p>{{number}}</p>
-		<input type="text" v-model="thing" v-on:keydown="addItem($event)">
+		<input type="text" v-model="thing" v-on:keydown.13="addItem">
 		<ol>
 			<li v-for="(item, index) of list" 
 			    v-on:click="removeItem(index)">
 			{{item}}</li>
 		</ol>
+		<select v-model="numbers" multiple size="5">
+			<option v-for="i in 5">{{i}}</option>
+		</select>
+		<p>Среднее арифметическое: {{average}}</p>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	<script src="script.js"></script>
