@@ -4,7 +4,9 @@ let vm = new Vue({
 		number:1,
 		thing: "",
 		list: ["сделать ДЗ", "Сидеть Дома", "Смотреть Netflix"],
-		numbers: ["1", "4"]
+		numbers: ["1", "4"],
+		n: 0,
+		count: 0
 	},
 	methods: {
 		double: function (event) {
@@ -17,6 +19,12 @@ let vm = new Vue({
 		},
 		removeItem: function(index){
 			this.list.splice(index, 1);
+		},
+		decr: function(){
+			this.n--;
+		},
+		incr: function(){
+			this.n++;
 		}
 	},
 	computed:{
@@ -28,7 +36,12 @@ let vm = new Vue({
 			return sum/this.numbers.length;
 		}
 	}
-})
+});
+
+vm.$watch("n", function(newValue){
+	console.log(newValue);
+	this.count++;
+});
 
 
 

@@ -19,6 +19,10 @@
 			<option v-for="i in 5">{{i}}</option>
 		</select>
 		<p>Среднее арифметическое: {{average}}</p>
+		<button type="button" v-on:click="decr">-</button>
+		{{n}}
+		<button type="button" v-on:click="incr">+</button>
+		<p>Количество изменений числа: {{count}}</p>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	<script src="script.js"></script>
