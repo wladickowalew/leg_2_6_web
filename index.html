@@ -23,6 +23,9 @@
 		{{n}}
 		<button type="button" v-on:click="incr">+</button>
 		<p>Количество изменений числа: {{count}}</p>
+		<input type="checkbox" v-model="v">
+		<h1 v-show="v">Now You See Me!SHOW</h1>
+		<h1 v-if="v">Now You See Me!IF</h1>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	<script src="script.js"></script>

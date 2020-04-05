@@ -6,7 +6,8 @@ let vm = new Vue({
 		list: ["сделать ДЗ", "Сидеть Дома", "Смотреть Netflix"],
 		numbers: ["1", "4"],
 		n: 0,
-		count: 0
+		count: 0,
+		v: true
 	},
 	methods: {
 		double: function (event) {
